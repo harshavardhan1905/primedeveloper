@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="en" class="scroll-smooth"  x-bind:dir="setting.theme_scheme_direction" x-bind:class="setting.theme_font_size" x-data="settingInit">
+
+
+<!-- Mirrored from templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/dashboard/auth/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Nov 2023 05:55:14 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title data-setting="app_name" x-text="setting.app_name + ' | Responsive Tailwind Admin Dashboard Template'">Qompac UI | Responsive Tailwind Admin Dashboard Template</title>
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo&amp;display=swap" rel="stylesheet">
+  
+  <!-- Config Options -->
+  <meta name="setting_options" content='{&quot;saveLocal&quot;:&quot;sessionStorage&quot;,&quot;storeKey&quot;:&quot;quisetting-tailwind&quot;,&quot;setting&quot;:{&quot;app_name&quot;:&quot;Qompac UI&quot;,&quot;theme_scheme_direction&quot;:&quot;ltr&quot;,&quot;theme_scheme&quot;:&quot;light&quot;,&quot;theme_style_appearance&quot;:[],&quot;theme_font_size&quot;:&quot;theme-fs-md&quot;,&quot;page_layout&quot;:&quot;container&quot;,&quot;sidebar_color&quot;:&quot;sidebar-white&quot;,&quot;sidebar_type&quot;:[],&quot;sidebar_menu_style&quot;:&quot;sidebar-default navs-rounded-all&quot;}}'>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/assets/images/favicon.ico" />
+  
+  <!-- SwiperSlider css -->
+  <link rel="stylesheet" href="../../assets/vendor/swiper-slider/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../../assets/vendor/swiper-slider/swiper-bundle.min.css"/>
+  
+  <!-- SweetAlert2 css -->
+  <link rel="stylesheet" href="../../assets/vendor/sweetalert2/dist/sweetalert2.min.css"/>
+  
+  <!-- Uppy css -->
+  <link rel="stylesheet" href="../../assets/vendor/uppy/uppy.min.css"/>
+  
+  <!-- QuillEditor css -->
+  <link rel="stylesheet" href="../../assets/vendor/quill/quill.snow.css"/>
+  
+  <!-- Flatpickr css -->
+  <link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css" />
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="../../assets/css/core/libs.min.css">
+  <link rel="stylesheet" href="../../assets/css/tailwinde209.css?v=1.0.0">
+  <link rel="stylesheet" href="../../assets/css/responsivee209.css?v=1.0.0">
+</head>
+
+<body class="overflow-x-hidden text-body bg-body dark:bg-dark-bg" x-bind:class="[setting.theme_scheme, setting.theme_transition, setting.theme_style_appearance.join(' ')]">
+  <!-- loader Start -->
+  <div id="loading">
+    <div class="loader simple-loader">
+        <div class="loader-body scroll-auto">
+            <img src="../../assets/images/loader.gif" alt="loader" class="image-loader img-fluid ">
+        </div>
+    </div>  </div>
+  <!-- loader END -->
+  <div id="bg-body-wrapper" class="bg-body wrapper dark:bg-dark-bg">
+<section class="block overflow-hidden">
+    <div class="flex flex-wrap m-0 items-center bg-white dark:bg-dark-card">
+        <div class="md:w-1/2 w-full flex-auto">
+            <div class="flex justify-center">
+                <div class="flex-auto px-24">
+                    <div
+                        class=" relative flex flex-col overflow-hidden bg-white rounded-lg dark:bg-dark-card  card-transparent shadow xl:px-24 justify-center mb-0">
+                        <div class="flex-auto p-8">
+                            <a href="../index.html"
+                                class="py-1 text-xl whitespace-nowrap mr-4 flex items-center mb-10 justify-center">
+                                <svg width="75" class="text-primary-500 dark:text-primary-500 brand-logo" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.25333 2H22.0444L29.7244 15.2103L22.0444 28.1333H7.25333L0 15.2103L7.25333 2ZM11.2356 9.32316H18.0622L21.3334 15.2103L18.0622 20.9539H11.2356L8.10669 15.2103L11.2356 9.32316Z"
+                                        fill="currentColor" />
+                                    <path d="M23.751 30L13.2266 15.2103H21.4755L31.9999 30H23.751Z" fill="#3FF0B9" />
+                                </svg>
+                                <h2 class="mb-0 ml-4 rtl:mr-4 dark:text-white">Qompac UI</h2>
+                            </a>
+                            <h2 class="text-center dark:text-white">Sign In</h2>
+                            <p class="text-center mb-4 dark:text-white text-secondary-600">Login to stay connected.</p>
+                            <form>
+                                <div class="flex flex-wrap">
+                                    <div class="flex-auto w-full mb-4">
+                                        <label for="email" class="mb-2 inline-block text-secondary-600 dark:text-white">Email</label>
+                                        <input type="email" class="block w-full  py-2 px-4 bg-white rounded border dark:border-secondary-800 outline-none dark:focus:border-primary-500 focus:border-primary-500 focus:shadow dark:bg-dark-card" id="email" aria-describedby="email" placeholder="xyz@example.com">
+                                    </div>
+                                    <div class="flex-auto w-full mb-4">
+                                        <label for="password" class="mb-2 inline-block dark:text-white text-secondary-600">Password</label>
+                                        <input type="password" class="block w-full  py-2 px-4 bg-white rounded border dark:border-secondary-800 outline-none dark:focus:border-primary-500 focus:border-primary-500 focus:shadow dark:bg-dark-card" id="password" placeholder="xxxx"
+                                            aria-describedby="password">
+                                    </div>
+                                    <div class="flex-auto w-full flex justify-between items-center">
+                                        <div class="block pl-6">
+                                            <input type="checkbox"
+                                                class="rounded -ml-6 mt-1 bg-no-repeat bg-center w-4 h-4 border border-primary-500 float-left"
+                                                id="customCheck1">
+                                            <label class="form-check-label dark:text-white text-secondary-600" for="customCheck1">
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                        <a href="recoverpw.html"
+                                            class="text-primary-500 hover:text-primary-600 dark:text-white">Forgot
+                                            Password?
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center mt-4">
+                                    <button type="submit" class="btn btn-primary dark:text-white">Sign In</button>
+                                </div>
+                                <p class="text-center my-4 dark:text-white text-secondary-600">or sign in with other accounts?</p>
+                                <div class="flex justify-center">
+                                    <ul class="flex">
+                                        <li class="relative block px-4 py-2 bg-white  text-heading border-0 pb-0 dark:bg-dark-card">
+                                            <a href="#">
+                                                <img src="https://templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/assets/images/brands/fb.svg" alt="fb">
+                                            </a>
+                                        </li>
+                                        <li class="relative block px-4 py-2 bg-white  text-heading border-0 pb-0 dark:bg-dark-card">
+                                            <a href="#">
+                                                <img src="https://templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/assets/images/brands/gm.svg" alt="gm">
+                                            </a>
+                                        </li>
+                                        <li class="relative block px-4 py-2 bg-white  text-heading border-0 pb-0 dark:bg-dark-card">
+                                            <a href="#">
+                                                <img src="https://templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/assets/images/brands/im.svg" alt="im">
+                                            </a>
+                                        </li>
+                                        <li class="relative block px-4 py-2 bg-white  text-heading border-0 pb-0 dark:bg-dark-card">
+                                            <a href="#">
+                                                <img src="https://templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/assets/images/brands/li.svg" alt="li">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="mt-4 mb-4 text-center dark:text-white text-secondary-600">
+                                    Don’t have an account?
+                                    <a href="sign-up.html"
+                                        class="text-primary-500 hover:text-primary-600">Click here to sign up.</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-auto lg:w-2/4 lg:block hidden bg-primary-500 p-0 -mt-1  overflow-hidden">
+            <img src="../../assets/images/auth/01.png" class="h-full w-full object-cover" alt="images">
+        </div>
+    </div>
+</section>
+  </div>
+  
+  
+  <script src="../../assets/js/setting-panel.js"></script>
+  <!-- Library Bundle Script -->
+  <script src="../../assets/js/core/libs.min.js"></script>
+  
+  <!-- External Library Bundle Script -->
+  <script src="../../assets/js/core/external.min.js"></script>
+  
+  <!-- mapchart Script -->
+  <script src="../../assets/js/charts/vectore-chart.js"></script>
+  
+  <!-- fslightbox Script -->
+  <script src="../../assets/js/plugins/fslightbox.js"></script>
+  
+  <!-- App Script -->
+  <script src="../../assets/js/qompac-ui.js"></script>
+  
+  <!-- Alpine Js-->
+  <script src="../../assets/js/plugins/alpine.js" defer></script>
+  
+  <!-- Dashboard Chart & Slider -->
+  <script src="../../assets/js/charts/dashboard.js" defer></script>
+  
+</body>
+
+
+<!-- Mirrored from templates.iqonic.design/product/qompac-ui-tailwind/tailwind/dist/dashboard/auth/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Nov 2023 05:55:14 GMT -->
+</html>
