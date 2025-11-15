@@ -5,7 +5,7 @@
             <div class="widgets-section">
                 <div class="row" style="align-items: center; justify-content: center;"z>
                     <!--Big Column-->
-                    <div class="big-column col-xl-7 col-lg-12 col-md-12 col-sm-12">
+                    <div class="big-column col-lg-12 col-md-12 col-sm-12">
                         <div class="row">
                             <!--Footer Column-->
                             <div class="footer-column col-xl-6 col-lg-6 col-md-6 col-sm-12">

@@ -149,7 +149,7 @@
             <div class="auto-container">
                 <!-- Fact Counter -->
                 <div class="fact-counter">
-                    <div class="row">
+                    <div class="row" style="justify-content:center;">
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="count-box">
@@ -166,24 +166,24 @@
                                 echo $query->num_rows();
                                 ?>">0</span></div>
                                     <h4 class="counter-title">Project <br>Taken</h4>
-                            </div>
+                                </div>
                         </div>
 
                         <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+                        <!-- <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
                             <div class="count-box">
                                 <div class="count"><span class="count-text" data-speed="5000" data-stop="11">0</span>K</div>
                                 <h4 class="counter-title">Twitter <br> Follower</h4>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
+                        <!-- <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
                             <div class="count-box">
                                 <div class="count"><span class="count-text" data-speed="5000" data-stop="12">0</span></div>
                                 <h4 class="counter-title">Awards<br>won</h4>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 

@@ -675,11 +675,13 @@
                 <!-- Project Block -->
                 <div class="project-block">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/1.jpg" alt=""></figure>
+                        <!-- <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/1.jpg" alt=""></figure> -->
+                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/1_2.jpg" alt=""></figure>
                         <div class="overlay-box">
                             <h4><a href="#">Centro Plasa</a></h4>
                             <div class="btn-box">
-                                <a href="<?php echo base_url()?>assets/images/gallery/1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
+                                <!-- <a href="<?php echo base_url()?>assets/images/gallery/1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a> -->
+                                <a href="<?php echo base_url()?>assets/images/gallery/1_2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
                                 <!--<a href="#"><i class="fa fa-external-link"></i></a>-->
                             </div>
                             <span class="tag"></span>
@@ -688,34 +690,34 @@
                 </div>
 
                 <!-- Project Block -->
-                <div class="project-block">
+                <!-- <div class="project-block">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/2.jpg" alt=""></figure>
+                        <figure class="image"><img src="<?php //echo base_url()?>assets/images/gallery/2.jpg" alt=""></figure>
                         <div class="overlay-box">
                             <h4><a href="#">Rio Ranch Texas</a></h4>
                             <div class="btn-box">
-                                <a href="<?php echo base_url()?>assets/images/gallery/2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
+                                <a href="<?php //echo base_url()?>assets/images/gallery/2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
                                 <!--<a href="#"><i class="fa fa-external-link"></i></a>-->
-                            </div>
+                            <!-- </div>
                             
                         </div>
                     </div>
-                </div>
+                </div> --> -->
 
                 <!-- Project Block -->
-                <div class="project-block">
+                <!-- <div class="project-block">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/3.jpg" alt=""></figure>
+                        <figure class="image"><img src="<?php //echo base_url()?>assets/images/gallery/3.jpg" alt=""></figure>
                         <div class="overlay-box">
                             <h4><a href="#">POW Leander</a></h4>
                             <div class="btn-box">
-                                <a href="<?php echo base_url()?>assets/images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
+                                <a href="<?php// echo base_url()?>assets/images/gallery/3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a> -->
                                 <!--<a href="#"><i class="fa fa-external-link"></i></a>-->
-                            </div>
+                            <!-- </div>
                             
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Project Block -->
                 <div class="project-block">
@@ -750,11 +752,13 @@
                 <!-- Project Block -->
                 <div class="project-block">
                     <div class="image-box">
-                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/6.jpg" alt=""></figure>
+                        <!-- <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/6.jpg" alt=""></figure> -->
+                        <figure class="image"><img src="<?php echo base_url()?>assets/images/gallery/6_1.png" alt=""></figure>
                         <div class="overlay-box">
                             <h4><a href="#">Reagan Crossing Phase I</a></h4>
                             <div class="btn-box">
-                                <a href="<?php echo base_url()?>assets/images/gallery/6.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
+                                <!-- <a href="<?php echo base_url()?>assets/images/gallery/6.jpg" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a> -->
+                                <a href="<?php echo base_url()?>assets/images/gallery/6_1.png" class="lightbox-image" data-fancybox="gallery"><i class="fa fa-search"></i></a>
                                 <!--<a href="#"><i class="fa fa-external-link"></i></a>-->
                             </div>
                             
@@ -886,6 +890,7 @@
                         <div class="testimonial-block">
                             <div class="inner-box">
                                 <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div>
+                                <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/new_brand1.png" alt=""></div> -->
                                 <div class="text">"Prime Developer delivered our mixed-use Centro Plaza on time and 6% under budget. Their project management minimized downtime and helped us achieve 85% occupancy within six months."</div>
                                 <div class="info-box">
                                     <h4 class="name">Sophia Rodriguez</h4>

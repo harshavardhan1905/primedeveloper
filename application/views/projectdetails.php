@@ -140,6 +140,10 @@
 }
 
 
+
+
+
+
     </style>
     <?php foreach($vals as $val){?>
 	            <!--Page Title-->
@@ -156,11 +160,12 @@
                 </section>
                 <!--End Page Title-->
 
-<div class="page-wrapper">
+    <div class="page-wrapper">
         <!--About One Start-->
         <section class="about-one">
             <div class="container">
                 <div class="row">
+
                     <div class="col-xl-6">
                         <div class="about-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-one__big-text">Apartments</div>
@@ -188,14 +193,86 @@
                                 <h2 class="section-title__title"><?=$val->aboutheading?></h2>
                             </div>
                             <p class="about-one__text"><?=$val->highlights?></p>
-                          
-                           <a href="<?php echo base_url()?>admin/uploads/products/<?=$val->flyer?>" class="thm-btn about-one__btn pdf-popup my-2"  >View Flyer</a>
+                            <!-- Popup Form Section -->
+                         <section id="viewer-details-form" class="form-popup" style="display:none;">
 
+                        <div class="form-overlay" onclick="closeForm()"></div>
+
+                        <div class="form-popup">
+                            <span class="close-btn " style="color: red;" onclick="closeForm()">Close</span>
+
+                            <form id="googleForm"
+                                action="https://docs.google.com/forms/d/e/1FAIpQLScDUCKiZt7U8i1wzQDygDi3gvoJdbR7pR5hpA-KPmBdfCO6cw/formResponse"
+                                method="POST"
+                                style="display:flex; flex-direction:column;"
+                                target="_self">
+
+                                <input name="entry.546632381" type="text" placeholder="Email" required>
+                                <input name="entry.1822920815" type="text" placeholder="Your Name" required>
+
+                                <input name="entry.916343259" type="hidden" id="projectName">
+                                <input name="entry.969595411" type="hidden" id="currentDate"> <br>
+
+                                <button type="submit" class="thm-btn about-one__btn my-2">View</button>
+                            </form>
                         </div>
+
+                    </section>
+                        <!-- End of Popup Form Section --> 
+                          
+                           <!-- <a href="<?php echo base_url()?>admin/uploads/products/<?=$val->flyer?>" class="thm-btn about-one__btn pdf-popup my-2"  >View Flyer</a> -->
+                           <a href="javascript:void(0);" 
+                                onclick="openForm('<?= base_url("admin/uploads/products/".$val->flyer) ?>', '<?= $val->name ?>')"
+                                class="thm-btn about-one__btn my-2">
+                                View Flyer
+                                </a>
+                                 
+                        </div>
+                        
                     </div>
                 </div>
             </div>
+            
         </section>
+        <script>
+            let flyerUrl = "";
+
+            // When user clicks the button
+            function openForm(url , projectName) {
+                flyerUrl = url;
+                document.getElementById("viewer-details-form").style.display = "flex";
+
+                // Auto-fill hidden fields
+                document.getElementById("projectName").value = projectName;
+                document.getElementById("currentDate").value = new Date().toISOString().split('T')[0];
+            }
+
+            // Close form popup
+            function closeForm() {
+                document.getElementById("viewer-details-form").style.display = "none";
+            }
+
+            // Handle Google Form submit silently
+            document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("googleForm").addEventListener("submit", async function(e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+
+                    await fetch("https://docs.google.com/forms/d/e/1FAIpQLScDUCKiZt7U8i1wzQDygDi3gvoJdbR7pR5hpA-KPmBdfCO6cw/formResponse", {
+                        method: "POST",
+                        mode: "no-cors",
+                        body: formData
+                    });
+
+                    // Hide popup
+                    closeForm();
+
+                    // NOW open the original flyer
+                    window.location.href = flyerUrl;
+                });
+            });
+</script>
         <!--About One End-->
 
         <!--Counter One Start-->
@@ -495,10 +572,10 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking1?></span>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <p>Prices From</p>
                                             <span><?=$val->price1?></span>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ m-0 col-lg-7">
@@ -1137,7 +1214,7 @@ foreach($photos as $photo){
             <span class="section-title__tagline">ESTABLISHED SITES</span>
             <h2 class="section-title__title">Transforming Properties Into Unique Visions</h2>
         </div>
-        <div class="thm-swiper__slider swiper-container" data-swiper-options='{"spaceBetween": 30, "slidesPerView": 1,"loop": true, "autoplay": { "delay": 5000 }, "breakpoints": {
+        <div class="thm-swiper__slider swiper-container" style="height:auto%" data-swiper-options='{"spaceBetween": 30, "slidesPerView": 1,"loop": true, "autoplay": { "delay": 5000 }, "breakpoints": {
             "575": {
                 "spaceBetween": 30,
                 "slidesPerView": 2
@@ -1242,7 +1319,29 @@ foreach ($sites as $site) {
                         <div class="neighborhoods__right">
                             <div class="neighborhoods__img-box">
                                 <div class="neighborhoods__img">
-                                    <img src="<?php echo base_url()?>assets/assets1/images/resources/neighborhoods-img-1.jpg" alt="">
+                                    <!-- <img src="<?php echo base_url()?>assets/assets1/images/resources/neighborhoods-img-1.jpg" alt=""> -->
+                                    <!-- <img src="<?php echo base_url()?>assets/assets1/images/resources/neighborhoods-img-1.jpg" alt=""> -->
+                                     <?php
+$pid = $val->id;
+
+// Fetch the single project row
+$project = $this->db->select('nearby')
+                    ->from('projects')
+                    ->where('id', $pid)
+                    ->get()
+                    ->row();
+
+if ($project && !empty($project->nearby)) { ?>
+    
+    <img src="<?php echo base_url('admin/uploads/products/'.$project->nearby); ?>" alt="" style="width:100%; height:92%;">
+
+<?php } else { ?>
+
+    <!-- Fallback image -->
+    <img src="<?php echo base_url('assets/assets1/images/resources/neighborhoods-img-1.jpg'); ?>" alt="" >
+
+<?php } ?>
+
                                 </div>
                                 <div class="neighborhoods__location-1">
                                     <div class="neighborhoods__map-markar"></div>
@@ -1303,7 +1402,7 @@ foreach ($sites as $site) {
 
 
           <!-- News Section -->
-    <section class="news-section pb-4">
+    <!-- <section class="news-section pb-4">
         <div class="auto-container">
             <div class="sec-title">
                 <span class="float-text">Blogs</span>
@@ -1311,7 +1410,7 @@ foreach ($sites as $site) {
             </div>
             <div class="row">
                 <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                <!-- <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="caption-box">
                              <div class="image-box">
@@ -1329,10 +1428,10 @@ foreach ($sites as $site) {
                                 </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                <!-- <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="caption-box">
                              <div class="image-box">
@@ -1350,10 +1449,10 @@ foreach ($sites as $site) {
                                 </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- News Block -->
-                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                <!-- <div class="news-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="caption-box">
                              <div class="image-box">
@@ -1374,7 +1473,7 @@ foreach ($sites as $site) {
                 </div>
             </div>
         </div>
-    </section>
+    </section> --> -->
     <!--End News Section -->
 
 

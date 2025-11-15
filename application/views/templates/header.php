@@ -75,8 +75,7 @@
 
 /* === Popup Box === */
 .form-popup {
-  /* background: #2f2f2f; */
-  /* padding: 25px 30px; */
+ 
   border-radius: 12px;
   width: 100%;
   max-width: 400px;
@@ -105,18 +104,18 @@
   
 }
 .form-popup button {
-  width: 10%;
-  background: transparent;
+  width: 30%;
+background-color: var(--aports-base);
   color: #fff;
   font-weight: bold;
-  position: relative;
-  right: 40px;
+  position: absolute;
+  right: 7px;
+  bottom: -3px;
+  border: none;
   cursor: pointer;
-  transition: background 0.2s;
+  /* transition: background 0.2s; */
 }
-.form-popup button:hover {
-  background-color: #2f2f2f49;
-}
+
 
 /* === Close Button === */
 .close-btn {
@@ -185,52 +184,48 @@
                                             $projects = $this->category->listprojects();
                                             $homeprojects = $this->category->listhomeprojects();
                                             foreach($projects as $pr){?>
-                                            <!-- <li><a href="<?php echo site_url('homecontroller/projectdetails/'.$pr->id)?>"><?=$pr->name?></a></li> -->
-                                            <!-- <li><a href="javascript:void(0);" onclick="openForm('<?php echo site_url('homecontroller/projectdetails/'.$pr->id)?>', <?=$pr->name?>)"><?=$pr->name?></a></li> -->
-                                            <li>
-                                                <a href="javascript:void(0);" 
-                                                    onclick="openForm('<?php echo site_url('homecontroller/projectdetails/'.$pr->id); ?>', '<?php echo htmlspecialchars($pr->name, ENT_QUOTES); ?>')">
-                                                    <?=$pr->name?>
-                                                </a>
-                                                </li>
+                                            <li><a href="<?php echo site_url('homecontroller/projectdetails/'.$pr->id)?>"><?=$pr->name?></a></li>
 
-                                            <!-- Hidden Form Popup -->
-                                                <section id="viewer-details-form" class="form-section">
-                                                <div class="form-overlay" onclick="closeForm()"></div>
-                                                <div class="form-popup">
-                                                    <!-- <span class="close-btn" onclick="closeForm()">&times;</span> -->
-        
-                                                    <form id="googleForm"  style="display:flex;"
-                                                    action="https://docs.google.com/forms/d/e/1FAIpQLScDUCKiZt7U8i1wzQDygDi3gvoJdbR7pR5hpA-KPmBdfCO6cw/formResponse" 
-                                                    method="POST"
-                                                    target="_self">
+                                            <!-- <li><a href="javascript:void(0);" onclick="openForm('<?php //echo site_url('homecontroller/projectdetails/'.$pr->id)?>', <?=$pr->name?>)"><?=$pr->name?></a></li> -->
 
-                                                    <!-- Visible field -->
-                                                    <input name="entry.1822920815" type="text" placeholder="Your Name" required>
+                                            <!-- <li> -->
+                                            <!--     <a href="javascript:void(0);"  -->
+                                            <!--         onclick="openForm('<?php //echo site_url('homecontroller/projectdetails/'.$pr->id); ?>', '<?php //echo htmlspecialchars($pr->name, ENT_QUOTES); ?>')"> -->
+                                            <!--         <?=$pr->name?> -->
+                                            <!--     </a> -->
+                                            <!-- </li> -->
 
-                                                    <!-- Hidden fields (to be auto-filled from DB later) -->
-                                                    <input name="entry.916343259" type="hidden" id="projectName">
-                                                    <input name="entry.969595411" type="hidden" id="currentDate">
+                                            <!-- <section id="viewer-details-form" class="form-section"> -->
 
-                                                    <button type="submit">-></button>
-                                                    </form>
-                                                </div>
-                                                </section>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
+                                            <!-- <div class="form-overlay" onclick="closeForm()"></div> -->
+
+                                            <!-- <div class="form-popup"> -->
+
+                                            <!-- <span class="close-btn" onclick="closeForm()">&times;</span> -->
+
+                                            <!-- <form id="googleForm"  style="display:flex;" -->
+                                            <!--     action="https://docs.google.com/forms/d/e/1FAIpQLScDUCKiZt7U8i1wzQDygDi3gvoJdbR7pR5hpA-KPmBdfCO6cw/formResponse"  -->
+                                            <!--     method="POST" -->
+                                            <!--     target="_self"> -->
+
+                                            <!-- <input name="entry.546632381" type="text" placeholder="Email" required> -->
+
+                                            <!-- <input name="entry.1822920815" type="text" placeholder="Your Name" required> -->
+
+                                            <!-- <input name="entry.916343259" type="hidden" id="projectName"> -->
+
+                                            <!-- <input name="entry.969595411" type="hidden" id="currentDate"> -->
+
+                                            <!-- <button type="submit">-></button> -->
+
+                                            <!-- </form> -->
+
+                                            <!-- </div> -->
+
+                                            <!-- </section> -->
+
+
                                             <?php } ?>
-                                                
-                                            
-
-
-
-
 
                                         </ul>
                                     </li>
