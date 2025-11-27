@@ -307,7 +307,8 @@ ul {
 .section-title__title {
   margin: 0;
   color: var(--aports-black);
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: 30px;
   line-height: 54px;
   font-weight: 700;
   margin-top: 2px;

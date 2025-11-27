@@ -138,6 +138,11 @@
     font:normal normal normal 14px/1 FontAwesome;
     font-weight:unset;
 }
+.about-one__text-box{
+    height: 30vh;
+    overflow-x:scroll;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
 
 
 
@@ -190,9 +195,11 @@
                         <div class="about-one__right">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline"><?=$val->abouttag?></span>
-                                <h2 class="section-title__title"><?=$val->aboutheading?></h2>
+                                <h4 class="section-title__title"><?=$val->aboutheading?></h4>
                             </div>
-                            <p class="about-one__text"><?=$val->highlights?></p>
+                            <div class="about-one__text-box">
+                                <p class="about-one__text"><?=$val->highlights?></p>
+                            </div>
                             <!-- Popup Form Section -->
                          <section id="viewer-details-form" class="form-popup" style="display:none;">
 
@@ -526,7 +533,8 @@
                 </div>
                 <div class="floor-plan__main-tab-box tabs-box">
                     <ul class="tab-buttons clearfix list-unstyled">
-                        <li data-tab="#penthouse" class="tab-btn active-btn"><span><?=$val->buildingname1?></span></li>
+                        <!-- <li data-tab="#penthouse" class="tab-btn active-btn"><span><?=$val->buildingname1?></span></li> -->
+                        <?php if($val->buildingname1){?><li data-tab="#penthouse" class="tab-btn active-btn"><span><?=$val->buildingname1?></span></li><?php }?>
                         <?php if($val->buildingname2){?><li data-tab="#stuido" class="tab-btn"><span><?=$val->buildingname2?></span></li><?php }?>
                         <?php if($val->buildingname3){?><li data-tab="#stuido3" class="tab-btn"><span><?=$val->buildingname3?></span></li><?php }?>
                         <?php if($val->buildingname4){?><li data-tab="#stuido4" class="tab-btn"><span><?=$val->buildingname4?></span></li><?php }?>
@@ -566,7 +574,7 @@
                                         </li>
                                         <li>
                                             <p>Available <?php if($val->name=='Rio Ranch Commercial Lots' || $val->name=='Rio Ranch 1 Acre Lots'){ echo 'Lots'; } else{ echo 'Units';} ?></p>
-                                            <span><?=$val->availableunits?></span>
+                                            <span><?=$val->availableunits1?></span>
                                         </li>
                                         <li>
                                             <p>Parking Available</p>
@@ -608,10 +616,10 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking2?></span>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <p>Prices From</p>
                                             <span><?=$val->price2?></span>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ col-lg-7">
@@ -645,10 +653,10 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking3?></span>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <p>Prices From</p>
                                             <span><?=$val->price3?></span>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ col-lg-7">
@@ -683,10 +691,7 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking4?></span>
                                         </li>
-                                        <li>
-                                            <p>Prices From</p>
-                                            <span><?=$val->price4?></span>
-                                        </li>
+                                      
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ col-lg-7">
@@ -721,10 +726,7 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking5?></span>
                                         </li>
-                                        <li>
-                                            <p>Prices From</p>
-                                            <span><?=$val->price5?></span>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ col-lg-7">
@@ -759,10 +761,7 @@
                                             <p>Parking Available</p>
                                             <span><?=$val->parking6?></span>
                                         </li>
-                                        <li>
-                                            <p>Prices From</p>
-                                            <span><?=$val->price6?></span>
-                                        </li>
+                                      
                                     </ul>
                                 </div>
                                 <div class="floor-plan__tab-content-righ col-lg-7">
@@ -1181,11 +1180,12 @@
                     <div class="inner-column">
                         <div class="carousel-outer">
                             <ul class="image-carousel owl-carousel owl-theme">
-<?php
-$photos=explode(',',$val->photos);
-foreach($photos as $photo){
-?>
-                                <li><a href="<?php echo base_url()?>admin/uploads/products/<?=$photo?>" class="lightbox-image" title="Image Caption Here"><img src="<?php echo base_url()?>admin/uploads/products/<?=$photo?>" alt=""></a></li>
+                                <?php
+                                $photos=explode(',',$val->photos);
+                                foreach($photos as $photo){
+                                ?>
+    
+                                <li><a href="<?php echo base_url()?>admin/uploads/products/<?=$photo?>" class="lightbox-image" title="Image Caption Here"><img src="<?php echo base_url()?>admin/uploads/products/<?=$photo?>" style="height: 400px;" alt=""></a></li>
           <?php } ?>                      
                               </ul>
                             
@@ -1214,7 +1214,7 @@ foreach($photos as $photo){
             <span class="section-title__tagline">ESTABLISHED SITES</span>
             <h2 class="section-title__title">Transforming Properties Into Unique Visions</h2>
         </div>
-        <div class="thm-swiper__slider swiper-container" style="height:auto%" data-swiper-options='{"spaceBetween": 30, "slidesPerView": 1,"loop": true, "autoplay": { "delay": 5000 }, "breakpoints": {
+        <div class="thm-swiper__slider swiper-container" style="height:300px;" data-swiper-options='{"spaceBetween": 30, "slidesPerView": 1,"loop": true, "autoplay": { "delay": 5000 }, "breakpoints": {
             "575": {
                 "spaceBetween": 30,
                 "slidesPerView": 2
@@ -1244,8 +1244,8 @@ foreach ($sites as $site) {
                                     ?>
                 <div class="swiper-slide">
                     <div class="apartments-one__single">
-                        <div class="apartments-one__img">
-                            <img src="<?php echo base_url()?>admin/uploads/products/<?=$sname?>" alt="">
+                        <div class="apartments-one__img" style="height:300px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                            <img src="<?php echo base_url()?>admin/uploads/products/<?=$sname?>" alt="" style="height:inherit;">
                         </div>
                     </div>
                 </div>
@@ -1322,75 +1322,103 @@ foreach ($sites as $site) {
                                     <!-- <img src="<?php echo base_url()?>assets/assets1/images/resources/neighborhoods-img-1.jpg" alt=""> -->
                                     <!-- <img src="<?php echo base_url()?>assets/assets1/images/resources/neighborhoods-img-1.jpg" alt=""> -->
                                      <?php
-$pid = $val->id;
+                                        $pid = $val->id;
 
-// Fetch the single project row
-$project = $this->db->select('nearby')
-                    ->from('projects')
-                    ->where('id', $pid)
-                    ->get()
-                    ->row();
+                                        // Fetch the single project row
+                                        $project = $this->db->select('nearby')
+                                                            ->from('projects')
+                                                            ->where('id', $pid)
+                                                            ->get()
+                                                            ->row();
 
-if ($project && !empty($project->nearby)) { ?>
-    
-    <img src="<?php echo base_url('admin/uploads/products/'.$project->nearby); ?>" alt="" style="width:100%; height:92%;">
+                                        if ($project && !empty($project->nearby)) { ?>
+                                            
+                                            <img src="<?php echo base_url('admin/uploads/products/'.$project->nearby); ?>" alt="" style="width:100%; height:92%;">
 
-<?php } else { ?>
+                                        <?php } else { ?>
 
-    <!-- Fallback image -->
-    <img src="<?php echo base_url('assets/assets1/images/resources/neighborhoods-img-1.jpg'); ?>" alt="" >
+                                            <!-- Fallback image -->
+                                            <img src="<?php echo base_url('assets/assets1/images/resources/neighborhoods-img-1.jpg'); ?>" alt="" >
 
-<?php } ?>
+                                        <?php } ?>
 
                                 </div>
-                                <div class="neighborhoods__location-1">
-                                    <div class="neighborhoods__map-markar"></div>
-                                    <div class="neighborhoods__popup-box">
-                                        <div class="neighborhoods__popup">
-                                            <div class="neighborhoods__popup-inner">
-                                                <h5 class="neighborhoods__popup-title"><img style="width:50px" src="<?php echo base_url()?>assets/assets1/images/resources/tchslogo.png"/></h5>
-                                                <p class="neighborhoods__popup-text">Cougar Nation empowers students for academic excellence and caring, responsible citizenship in a nurturing environment.</p>
-                                                <!--<span class="neighborhoods__popup-km">13.5KM</span>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="neighborhoods__location-1 neighborhoods__location-2">
-                                    <div class="neighborhoods__map-markar neighborhoods__map-markar-2"></div>
-                                    <div class="neighborhoods__popup-box">
-                                        <div class="neighborhoods__popup">
-                                            <div class="neighborhoods__popup-inner">
-                                                <h5 class="neighborhoods__popup-title"><img style="width:60px" src="<?php echo base_url()?>assets/assets1/images/resources/nfmlogo.png"/></h5>
-                                                <p class="neighborhoods__popup-text">Selling cheap, telling truth, offering selection, and service, improving people's lifestyles since inception.</p>
-                                                <!--<span class="neighborhoods__popup-km">13.5KM</span>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="neighborhoods__location-1 neighborhoods__location-3">
-                                    <div class="neighborhoods__map-markar neighborhoods__map-markar-3"></div>
-                                    <div class="neighborhoods__popup-box">
-                                        <div class="neighborhoods__popup">
-                                            <div class="neighborhoods__popup-inner">
-                                                <h5 class="neighborhoods__popup-title"><img style="width:100px" src="<?php echo base_url()?>assets/assets1/images/resources/castlelogo.png"/></h5>
-                                                <p class="neighborhoods__popup-text">TX: 2,900-acre award-winning community with 4,300+ homes, fostering living, working, playing, and thriving.</p>
-                                                <!--<span class="neighborhoods__popup-km">13.5KM</span>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="neighborhoods__location-1 neighborhoods__location-4">
-                                    <div class="neighborhoods__map-markar neighborhoods__map-markar-4"></div>
-                                    <div class="neighborhoods__popup-box">
-                                        <div class="neighborhoods__popup">
-                                            <div class="neighborhoods__popup-inner">
-                                                <h5 class="neighborhoods__popup-title"><img style="width:100px" src="<?php echo base_url()?>assets/assets1/images/resources/wallmart.png"/></h5>
-                                                <p class="neighborhoods__popup-text">Conveniently located, find all you need at Lewisville Walmart: furniture, bikes, toys, clothing, and more.</p>
-                                                <!--<span class="neighborhoods__popup-km">13.5KM</span>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- 
+<div class="neighborhoods__location-1">
+    <div class="neighborhoods__map-markar"></div>
+    <div class="neighborhoods__popup-box">
+        <div class="neighborhoods__popup">
+            <div class="neighborhoods__popup-inner">
+                <h5 class="neighborhoods__popup-title">
+                    <img style="width:50px" src="<?php echo base_url()?>assets/assets1/images/resources/tchslogo.png"/>
+                </h5>
+                <p class="neighborhoods__popup-text">
+                    Cougar Nation empowers students for academic excellence and caring, responsible citizenship in a nurturing environment.
+                </p>
+                <!-- <span class="neighborhoods__popup-km">13.5KM</span> -->
+            <!--</div>
+        </div>
+    </div>
+</div>
+-->
+
+<!-- 
+<div class="neighborhoods__location-1 neighborhoods__location-2">
+    <div class="neighborhoods__map-markar neighborhoods__map-markar-2"></div>
+    <div class="neighborhoods__popup-box">
+        <div class="neighborhoods__popup">
+            <div class="neighborhoods__popup-inner">
+                <h5 class="neighborhoods__popup-title">
+                    <img style="width:60px" src="<?php echo base_url()?>assets/assets1/images/resources/nfmlogo.png"/>
+                </h5>
+                <p class="neighborhoods__popup-text">
+                    Selling cheap, telling truth, offering selection, and service, improving people's lifestyles since inception.
+                </p>
+                <!-- <span class="neighborhoods__popup-km">13.5KM</span> -->
+           <!-- </div>
+        </div>
+    </div>
+</div>
+-->
+
+<!-- 
+<div class="neighborhoods__location-1 neighborhoods__location-3">
+    <div class="neighborhoods__map-markar neighborhoods__map-markar-3"></div>
+    <div class="neighborhoods__popup-box">
+        <div class="neighborhoods__popup">
+            <div class="neighborhoods__popup-inner">
+                <h5 class="neighborhoods__popup-title">
+                    <img style="width:100px" src="<?php echo base_url()?>assets/assets1/images/resources/castlelogo.png"/>
+                </h5>
+                <p class="neighborhoods__popup-text">
+                    TX: 2,900-acre award-winning community with 4,300+ homes, fostering living, working, playing, and thriving.
+                </p>
+                <!-- <span class="neighborhoods__popup-km">13.5KM</span> -->
+            <!--</div>
+        </div>
+    </div>
+</div>
+-->
+
+<!-- 
+<div class="neighborhoods__location-1 neighborhoods__location-4">
+    <div class="neighborhoods__map-markar neighborhoods__map-markar-4"></div>
+    <div class="neighborhoods__popup-box">
+        <div class="neighborhoods__popup">
+            <div class="neighborhoods__popup-inner">
+                <h5 class="neighborhoods__popup-title">
+                    <img style="width:100px" src="<?php echo base_url()?>assets/assets1/images/resources/wallmart.png"/>
+                </h5>
+                <p class="neighborhoods__popup-text">
+                    Conveniently located, find all you need at Lewisville Walmart: furniture, bikes, toys, clothing, and more.
+                </p>
+                <!-- <span class="neighborhoods__popup-km">13.5KM</span> -->
+           <!-- </div>
+        </div>
+    </div>
+</div>
+-->
+
                             </div>
                         </div>
                     </div>
@@ -1473,7 +1501,7 @@ if ($project && !empty($project->nearby)) { ?>
                 </div>
             </div>
         </div>
-    </section> --> -->
+    </section> -->
     <!--End News Section -->
 
 

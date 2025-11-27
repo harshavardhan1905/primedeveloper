@@ -351,7 +351,7 @@
                 width: 200px;
                 height: 120px;
                 display: flex;
-                box-shadow: 1px 1px 4px 1px red;
+                box-shadow: 1px 1px 4px 1px #2f2f2f;
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
@@ -493,46 +493,46 @@
             <div class="sponsors-outer">
                 <!--Sponsors Carousel-->
                 <ul class="sponsors-carousel owl-carousel owl-theme">
-                   <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/5.png" alt=""></a></figure></li>-->
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/2.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/3.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/4.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/5.png" alt=""></a></figure></li>
+                   <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/5.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/1.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/2.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/3.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/4.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/5.png" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/6.png" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/7.png" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/8.png" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/9.png" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/10.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/11.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/12_1.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/13_12.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/14.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/16.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/17.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/18.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/19.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/20.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/21.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/22.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/11.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/12_1.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/13_12.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/14.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/16.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/17.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/18.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/19.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/20.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/21.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/22.png" alt=""></a></figure></li>
                     <!-- <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/23.png" alt=""></a></figure></li> -->
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/24.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/luxe.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/ohwah.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/tuffipuff.jpg" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/williamson.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/lego.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/threewheels.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/24.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/luxe.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/ohwah.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/tuffipuff.jpg" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/williamson.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/lego.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/threewheels.png" alt=""></a></figure></li>
 
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/bestbrains.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/cara_denstiry.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/ion.jpg" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/keds.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/niva_dental.jpg" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/shipley.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/thebrace.png" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/thelearning.jpg" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="<?php echo base_url()?>assets/images/clients/ups.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/bestbrains.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/cara_denstiry.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/ion.jpg" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/keds.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/niva_dental.jpg" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/shipley.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/thebrace.png" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/thelearning.jpg" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img class="transparant-bg-img" src="<?php echo base_url()?>assets/images/clients/ups.png" alt=""></a></figure></li>
 
 
 
@@ -889,7 +889,8 @@
                         <!-- Testimonial Block -->
                         <div class="testimonial-block">
                             <div class="inner-box">
-                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div>
+                                <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div> -->
+                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/test-logo.png" alt=""></div>
                                 <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/new_brand1.png" alt=""></div> -->
                                 <div class="text">"Prime Developer delivered our mixed-use Centro Plaza on time and 6% under budget. Their project management minimized downtime and helped us achieve 85% occupancy within six months."</div>
                                 <div class="info-box">
@@ -902,7 +903,10 @@
                         <!-- Testimonial Block -->
                         <div class="testimonial-block">
                             <div class="inner-box">
-                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div>
+                                <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div> -->
+                                <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div> -->
+                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/test-logo.png" alt=""></div>
+
                                 <div class="text">"The flexible units at POW Lewisville gave our operations the ramp space we needed. Clear timelines and weekly updates made the rollout smooth and predictable."</div>
                                 <div class="info-box">
                                     <h4 class="name">Jamal Khan</h4>
@@ -914,7 +918,9 @@
                         <!-- Testimonial Block -->
                         <div class="testimonial-block">
                             <div class="inner-box">
-                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div>
+                                <!-- <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/thumb-1.jpg" alt=""></div> -->
+                                <div class="image-box"><img class="rounded" src="<?php echo base_url()?>assets/images/resource/test-logo.png" alt=""></div>
+
                                 <div class="text">"From permitting through handover, Prime Developer handled every complexity professionally. Tenant satisfaction and retention improved significantly after move-in."</div>
                                 <div class="info-box">
                                     <h4 class="name">Isabella Chen</h4>
